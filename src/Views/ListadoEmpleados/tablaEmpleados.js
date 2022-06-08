@@ -149,6 +149,7 @@ const TablaEmpleados = (props) => {
               <TableCell align="left">{row.cuil}</TableCell>
               <TableCell align="left">{row.alta_fecha}</TableCell>
               <TableCell align="left">{row.baja_fecha}</TableCell>
+              
             </TableRow>
             
             
