@@ -11,7 +11,7 @@ import NavBar from './Components/NavBar/NavBar'
 import {decodeToken} from 'react-jwt'
 
 function App() {
-  const secreto = decodeToken(localStorage.getItem('token')).data.secreto
+  // const secreto = decodeToken(localStorage.getItem('token')).data.secreto
 
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route path='/generarQR' element={<GenerarQR secreto={secreto}/>}/>
+          <Route path='/generarQR' element={<GenerarQR />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Registrar />}/>
           <Route path='/selectEmpresa' element={<SelectEmpresa />}/>
