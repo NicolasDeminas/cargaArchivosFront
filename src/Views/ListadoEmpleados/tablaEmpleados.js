@@ -107,7 +107,14 @@ const TablaEmpleados = (props) => {
                     authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             })
-            setUsuarios(usuarios.data)
+            const usuariosActivos = []
+            usuarios.data.map(usuario => {
+              if (usuario.activo){
+                usuariosActivos.push(usuario)
+              }
+              
+            })
+            setUsuarios(usuariosActivos)
         }
         consultaAPI()
     }, [])
